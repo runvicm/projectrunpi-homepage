@@ -1,3 +1,5 @@
+import { Bell, Rocket, TrendingUp, Wrench } from "lucide-react";
+
 export const AboutLeft = () => (  
   <div className="bg-white rounded-2xl p-8 shadow-lg border border-teal-100 hover:shadow-xl transition-shadow">
     <h3 className="text-2xl font-bold text-teal-700 mb-9">Explore My Work</h3>
@@ -5,17 +7,17 @@ export const AboutLeft = () => (
     <div className="space-y-9">
       <div className="flex items-start gap-4">
         <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center shrink-0">
-          <span className="text-xl">🚀</span>
+          <span className="text-xl"><Rocket /></span>
         </div>
         <div>
           <h4 className="font-bold text-gray-800 mb-2">Projects:</h4>
-          <p className="text-gray-600 text-sm">Solo builds and creative experiments I've shipped.</p>
+          <p className="text-gray-600 text-sm">Solo builds shipped and self-hosted.</p>
         </div>
       </div>
 
       <div className="flex items-start gap-4">
         <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center shrink-0">
-          <span className="text-xl">🛠️</span>
+          <span className="text-xl"><Wrench /></span>
         </div>
         <div>
           <h4 className="font-bold text-gray-800 mb-2">Tech Stack & Learnings:</h4>
@@ -25,7 +27,7 @@ export const AboutLeft = () => (
 
       <div className="flex items-start gap-4">
         <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center shrink-0">
-          <span className="text-xl">📈</span>
+          <span className="text-xl"><TrendingUp /></span>
         </div>
         <div>
           <h4 className="font-bold text-gray-800 mb-2">Progress & Growth:</h4>
@@ -35,7 +37,7 @@ export const AboutLeft = () => (
 
       <div className="flex items-start gap-4">
         <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center shrink-0">
-          <span className="text-xl">💡</span>
+          <span className="text-xl"><Bell /></span>
         </div>
         <div>
           <h4 className="font-bold text-gray-800 mb-2"> Recent Updates:</h4>

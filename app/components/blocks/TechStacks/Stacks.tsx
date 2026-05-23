@@ -1,12 +1,9 @@
-
-
-
 const STACKS = [
   { category: 'Development Environment',
     info: [
       {
         label: 'VScode',
-        icon: '/assets/icons/brands/logo/vscode.svg',
+        icon: '/icons/vscode.svg',
         desc: 'My daily driver for coding. Quick and works great with everything.',
         href: 'https://code.visualstudio.com/docs'
       },

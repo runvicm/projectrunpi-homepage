@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export const HeroAbout = () => (
   <section className="max-w-4xl mx-auto px-8 py-16 text-center relative">
     <div className="absolute top-0 right-1/4 w-12 h-12 bg-teal-300 rounded-lg opacity-20 rotate-12"></div>
@@ -20,7 +22,7 @@ export const HeroAbout = () => (
         I built this site to keep track of the projects I'm working on, the tools I'm experimenting with, and the lessons I learn along the way. It's part portfolio, part notebook, a place where I test ideas, figure out what works (and what doesn't), and watch my skills evolve over time.
       </p>
       <p className="text-gray-700 leading-relaxed mb-4">
-        What started as a simple experiment has turned into a collection of hands-on learning, challenges, and solutions. Whether I'm diving into a new framework, wrestling with a stubborn bug, optimizing my server setup, or just tinkering for fun, this is where I capture it all. It keeps me organized and gives me a way to look back and see how far I've come.
+        Today it's grown into a proper showcase of React, TypeScript, Tailwind, and Laravel. <br />Need something built? Check out my <Link to="/services" className="text-teal-600">Services</Link>.
       </p>
       <p className="text-gray-700 leading-relaxed mb-4">
         Thanks for stopping by!

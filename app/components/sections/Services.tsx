@@ -9,10 +9,10 @@ const SERVICES = [
 export const Services = () => {
   return (
     <section className="bg-linear-to-b from-blue-100 to-white py-20">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
           <p className="text-teal-600 text-sm font-semibold uppercase tracking-widest mb-2">What I Offer</p>
-          <h2 className="text-3xl font-bold text-teal-900">Services</h2>
+          <h3 className="text-4xl font-bold text-teal-700 mb-4">Services</h3>
         </div>
  
         <div className="flex flex-col md:flex-row gap-5">

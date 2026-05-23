@@ -14,7 +14,7 @@ interface LogProps {
   url: string;
 }
 
-const tagColor = [
+const TAG_COLOR = [
   'bg-teal-500/20 text-teal-400',
   'bg-blue-500/20 text-blue-400',
   'bg-green-500/20 text-green-400',
@@ -34,15 +34,19 @@ export const Devlog = () => {
         "X-Requested-With": "XMLHttpRequest"
       }
     })
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) return null;
+        return res.json();
+      })
       .then(data => setLogs(data))
   }, [])
-      
+        
 
   let tagColorIndex = 0;
   const getTagColor = (index: number) => {
-    return tagColor[index % tagColor.length];
+    return TAG_COLOR[index % TAG_COLOR.length];
   } 
+
 
   return (
     <section className="py-20 bg-linear-to-b from-blue-50 via-cyan-100 to-teal-100">
@@ -81,7 +85,7 @@ export const Devlog = () => {
                     })
                   ) : (
                     <div>
-                      <span>No tags</span>
+                      <span className="text-teal-500">No tag</span>
                     </div>
                   )}
                 </div>
@@ -105,7 +109,7 @@ export const Devlog = () => {
             </div>
           ))}
 
-          {logs === null ? (
+          {logs === null || logs.length === 0 ? (
             Array.from({ length: 3 }).map((_, index) => (
               <div key={index} className="bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-red-500 hover:shadow-xl transition-all flex flex-col h-full items-center justify-center">
                 <h4 className="text-xl font-bold text-gray-600 mb-3">No Update</h4>
