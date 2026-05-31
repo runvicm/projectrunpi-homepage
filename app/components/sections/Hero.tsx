@@ -4,7 +4,7 @@ import { CoreStacks } from "../blocks/TechStacks/CoreStacks"
 import { CTA } from "../blocks/CTA"
 
 export const Hero = () => (
-  <section className="bg-linear-to-b from-teal-100 via-cyan-100 to-blue-100 py-24 relative overflow-hidden">
+  <section className="bg-linear-to-b from-teal-100 via-cyan-100 to-cyan-50 py-24 relative overflow-hidden">
     <FloatingIcon />
     <div className="max-w-4xl mx-auto px-6 text-center">
       <p className="text-teal-600 font-semibold text-sm uppercase tracking-wider mb-4">Full-Stack Developer</p>

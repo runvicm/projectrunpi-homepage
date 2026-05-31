@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import { Main_Links } from "~/constant/main-liks"
+import { Main_Links } from "~/constant/main-links"
 
 export const FootNav = () => (
   <div>

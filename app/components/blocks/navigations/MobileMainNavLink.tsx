@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router";
-import { Main_Links } from "~/constant/main-liks";
+import { Main_Links } from "~/constant/main-links";
 import { SearchBarInput } from "./SearchBarInput";
 
 export const MobileMainNavLink = () => {

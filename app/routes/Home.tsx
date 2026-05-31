@@ -2,8 +2,22 @@ import { SITE_NAME } from "~/constant/app";
 import type { Route } from "./+types/Home";
 import { Hero } from "~/components/sections/Hero";
 import { PersonalProjects } from "~/components/sections/PersonalProject";
-import { Services } from "~/components/sections/Services";
+import { ServicesSection } from "~/components/sections/ServicesSection";
 import { Devlog } from "~/components/sections/DevLog";
+import { FeatureProject } from "~/components/sections/FeatureProject";
+import type { LoaderFunctionArgs } from "react-router";
+
+
+
+
+
+// export async function loader() {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+//   const data = await res.json();
+//   console.log("data:", data);
+//   return data;
+// }
+
 
 
 export function meta({}: Route.MetaArgs) {
@@ -16,8 +30,9 @@ export function meta({}: Route.MetaArgs) {
 const Home = () => (
   <main>
     <Hero />
-    <Services />
+    <FeatureProject />
     <PersonalProjects />
+    <ServicesSection />
     <Devlog />
   </main>
 );

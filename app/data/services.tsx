@@ -1,0 +1,70 @@
+import { Database, Globe, Layers } from "lucide-react";
+
+export const SERVICE_PACKAGES = [
+  {
+    id: "starter",
+    icon: Layers,
+    badge: "Starter Package",
+    badgeClass: "bg-blue-100 text-blue-800",
+    name: "Static Website",
+    desc: "Clean, fast, and responsive pages — perfect for landing pages, service pages, and about pages.",
+    price: "$100",
+    priceLabel: "base",
+    priceNote: "+$40 per additional page\nAdditional revisions at $25/hr",
+    popular: false,
+    included: [
+      "Up to 1 page (Landing, Services, or About)",
+      "Built with React, TypeScript, and Tailwind CSS",
+      "Fully responsive (mobile, tablet, desktop)",
+      "SSR-ready structure",
+      "2 rounds of revisions",
+    ],
+    notIncluded: [
+      "Design — client provides Figma or reference",
+    ],
+  },
+  {
+    id: "standard",
+    icon: Globe,
+    badge: "Standard Package",
+    badgeClass: "bg-teal-100 text-teal-800",
+    name: "Static Website + Hosting",
+    desc: "Everything in Starter, plus deployment on Cloudflare Pages and monthly maintenance so your site stays up and updated.",
+    price: "$150",
+    priceLabel: "base",
+    priceNote: "+$40 per additional page\n$20/mo maintenance (2 hrs of edits included)\nAdditional revisions at $25/hr",
+    popular: true,
+    included: [
+      "Everything in Starter package",
+      "Deployed to Cloudflare Pages (fast global CDN)",
+      "Domain setup (client provides, or I register — discussed separately)",
+      "Monthly maintenance: up to 2 hrs of minor edits",
+    ],
+    notIncluded: [
+      "Design — client provides Figma or reference",
+    ],
+  },
+  {
+    id: "professional",
+    icon: Database,
+    badge: "Professional Package",
+    badgeClass: "bg-violet-100 text-violet-800",
+    name: "Full-Stack Web App",
+    desc: "A complete web application with backend, database, SSR, and dynamic features — built to scale.",
+    price: "$25",
+    priceLabel: "/hr",
+    priceNote: "Billed hourly · Scope agreed before project begins\nHourly rate applies to meetings and revisions too",
+    popular: false,
+    included: [
+      "Built with Laravel, InertiaJS, React, TypeScript, Tailwind",
+      "Server-side rendering via InertiaJS",
+      "Authentication and basic user management",
+      "Fully responsive frontend",
+    ],
+    notIncluded: [
+      "Admin dashboard (Filament or custom) — available at extra hourly rate",
+      "Deployment — available, discussed separately",
+      "Design — client provides Figma or reference",
+    ],
+  },
+]

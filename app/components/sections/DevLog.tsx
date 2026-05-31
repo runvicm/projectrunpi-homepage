@@ -1,5 +1,6 @@
-import { Eye, Heart } from "lucide-react";
+import { Eye, Info, Logs, TriangleAlert } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router";
 
 interface LogProps {
   title: string;
@@ -24,32 +25,42 @@ const TAG_COLOR = [
   'bg-pink-500/20 text-pink-400',
 ] as const;
 
+
 export const Devlog = () => {
-  
-  const [logs, setLogs] = useState<LogProps[] | null>(null)
+  const [logs, setLogs] = useState<LogProps[] | null>(null);
 
   useEffect(() => {
-    fetch("https://api.projectrunpi.local/homepage/devlog", {
-      headers: {
-        "X-Requested-With": "XMLHttpRequest"
-      }
-    })
+    fetch("/api/devlog")
       .then(res => {
         if (!res.ok) return null;
         return res.json();
       })
-      .then(data => setLogs(data))
-  }, [])
-        
+    .then((data: unknown) => {
+      if (data) setLogs(data as LogProps[]);
+    })
+  }, []);
 
   let tagColorIndex = 0;
   const getTagColor = (index: number) => {
     return TAG_COLOR[index % TAG_COLOR.length];
   } 
 
+  const handleClick = (slug: string , e: React.MouseEvent<HTMLAnchorElement>) => {
+
+    e.preventDefault();
+      const href = e.currentTarget.href; // save it here
+
+      fetch(`/api/devlog/view/${slug}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slug }),
+      }).finally(() => {
+        window.location.href = href;
+      });
+  };
 
   return (
-    <section className="py-20 bg-linear-to-b from-blue-50 via-cyan-100 to-teal-100">
+    <section className="pb-24 bg-linear-to-b from-blue-50 via-cyan-100 to-teal-100">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
           <h3 className="text-4xl font-bold  text-teal-700 mb-4">Latest Updates</h3>
@@ -104,12 +115,12 @@ export const Devlog = () => {
                     <span>{log.view_count}</span>
                   </div>
                 </div>
-                <a href={log.url} className="text-blue-400 text-sm font-medium hover:text-blue-300 transition">Read more →</a>
+                <a href={`https://devlog.projectrunpi.com/${log.slug}`} className="text-blue-400 text-sm font-medium hover:text-blue-300 transition" onClick={(e) => handleClick(log.slug, e)}>Read more →</a>
               </div>
             </div>
           ))}
 
-          {logs === null || logs.length === 0 ? (
+          {!logs || logs.length === 0 ? (
             Array.from({ length: 3 }).map((_, index) => (
               <div key={index} className="bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-red-500 hover:shadow-xl transition-all flex flex-col h-full items-center justify-center">
                 <h4 className="text-xl font-bold text-gray-600 mb-3">No Update</h4>
@@ -123,6 +134,14 @@ export const Devlog = () => {
             ))
           )}
         </div>
+
+        {!logs && (
+          <div className="flex justify-center gap-1 mt-5">
+            <p className="bg-red-300 flex items-center gap-1 px-3 py-1.5 rounded-full border border-teal-200 text-slate-500 text-sm">
+              <span className="text-red-700 flex gap-2 items-center"><TriangleAlert size={16} />Service is temporarily unavailable. Please try again later.</span> 
+            </p>
+          </div>
+        )}
       </div>
     </section>
   )

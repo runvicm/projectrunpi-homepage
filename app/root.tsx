@@ -5,12 +5,14 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useNavigation,
 } from "react-router";
 
 import type { Route } from "./+types/root";
 import "./app.css";
 import { Header } from "./components/sections/Header";
 import { Footer } from "./components/sections/Footer";
+
 
 export const links: Route.LinksFunction = () => [
   // { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -46,7 +48,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+   const navigation = useNavigation(); // 👈 add this
+
+  return (
+    <>
+      {navigation.state === "loading" && (
+        <div className="fixed top-0 left-0 w-full h-1 bg-teal-500 animate-pulse z-50" />
+      )}
+      <Outlet />
+    </>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
