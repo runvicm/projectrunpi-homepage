@@ -12,3 +12,4 @@
 
 # pnpm
 pnpm-debug.log*
+.wrangler
