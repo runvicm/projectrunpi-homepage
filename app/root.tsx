@@ -33,6 +33,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:image" content="https://projectrunpi.com/og-image.png" />
+        <meta property="og:title" content="Project RunPi" />
+        <meta property="og:description" content="I build real, working web apps with React Router 7 and Laravel, tailored to what you actually need." />
         <Meta />
         <Links />
       </head>

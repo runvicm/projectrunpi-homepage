@@ -1,8 +1,7 @@
 import { ArrowUpRight, Info } from "lucide-react";
 import { Link } from "react-router";
-import { SERVICE_PACKAGES } from "~/data/services";
+import { SERVICE_PACKAGES } from "~/constant/services";
  
-
 export const ServicesSection = () => {
   return (
     <section className="bg-linear-to-b from-white to-blue-50 pb-24">
@@ -46,7 +45,7 @@ export const ServicesSection = () => {
 
           <div className="flex justify-center gap-1 mt-5">
             <p className="bg-white flex items-center gap-1 px-3 py-1.5 rounded-full border border-teal-200 text-slate-500 text-sm">
-              <span className="text-teal-300"><Info size={16} /></span> This website is built using the same stack I offer. feel free to look around as a live demo of my work.
+              <span className="text-teal-300"><Info size={16} /></span> This website is built using the same stack I offer. Feel free to look around as a live demo of my work.
             </p>
           </div>
 

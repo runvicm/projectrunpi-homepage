@@ -14,7 +14,7 @@ export const SERVICE_PACKAGES = [
     popular: false,
     included: [
       "Up to 1 page (Landing, Services, or About)",
-      "Built with React, TypeScript, and Tailwind CSS",
+      "Built with React Router 7, TypeScript, and Tailwind CSS",
       "Fully responsive (mobile, tablet, desktop)",
       "SSR-ready structure",
       "2 rounds of revisions",

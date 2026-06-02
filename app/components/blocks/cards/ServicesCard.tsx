@@ -36,11 +36,13 @@ export const ServicesCard = ( {...service}: ServiceProps ) => {
         {service.price} <span className="text-sm font-normal text-muted-foreground">{service.priceLabel}</span>
       </p>
       <p className="text-xs text-muted-foreground leading-relaxed">
-        {service.priceNote}
+        {service.priceNote.split('\n').map((line, i) => (
+          <span key={i}>{line}<br /></span>
+        ))}
       </p>
 
       <a
-        href="https://upwork.com/your-profile"
+        href="https://www.upwork.com/freelancers/~0100c0f1552b67ba88"
         target="_blank"
         className="mt-auto text-center text-sm border border-border rounded-md py-2 px-4 hover:bg-muted transition-colors"
       >

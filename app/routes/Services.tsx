@@ -1,10 +1,7 @@
+import { ServicesCard } from "~/components/blocks/cards/ServicesCard";
 import type { Route } from "./+types/Services";
 import { SITE_NAME } from "~/constant/app";
-import { ServicesCard } from "~/components/blocks/cards/ServicesCard";
-import { SERVICE_PACKAGES } from "~/data/services";
-
-
-
+import { SERVICE_PACKAGES } from "~/constant/services";
 
 export function meta({}: Route.MetaArgs) {
   return [

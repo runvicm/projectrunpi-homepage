@@ -4,7 +4,6 @@ import { HeroAbout } from "~/components/sections/HeroAbout";
 import type { Route } from "./+types/About";
 import { SITE_NAME } from "~/constant/app";
 
-
 export function meta({}: Route.MetaArgs) {
   return [
     { title: `${SITE_NAME} - About` },

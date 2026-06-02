@@ -9,8 +9,6 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-
-
 const TechStacks = () => (
   <div className="bg-linear-to-br from-cyan-50 to-teal-50 min-h-screen">
     {/* <!-- Decorative shapes --> */}

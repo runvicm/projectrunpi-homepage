@@ -1,6 +1,5 @@
-import { Eye, Info, Logs, TriangleAlert } from "lucide-react";
+import { Eye, TriangleAlert } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router";
 
 interface LogProps {
   title: string;
@@ -46,7 +45,6 @@ export const Devlog = () => {
   } 
 
   const handleClick = (slug: string , e: React.MouseEvent<HTMLAnchorElement>) => {
-
     e.preventDefault();
       const href = e.currentTarget.href; // save it here
 
@@ -115,7 +113,7 @@ export const Devlog = () => {
                     <span>{log.view_count}</span>
                   </div>
                 </div>
-                <a href={`https://devlog.projectrunpi.com/${log.slug}`} className="text-blue-400 text-sm font-medium hover:text-blue-300 transition" onClick={(e) => handleClick(log.slug, e)}>Read more →</a>
+                <a href={`https://devlog.projectrunpi.com/view/${log.slug}`} className="text-blue-400 text-sm font-medium hover:text-blue-300 transition" onClick={(e) => handleClick(log.slug, e)}>Read more →</a>
               </div>
             </div>
           ))}

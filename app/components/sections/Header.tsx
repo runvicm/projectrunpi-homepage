@@ -4,7 +4,6 @@ import { SearchBarInput } from "../blocks/navigations/SearchBarInput"
 import { AppIcon } from "../ui/AppIcon"
 import { AppName } from "../ui/AppName"
 
-
 export const Header = () => {
   return (
     <nav className="bg-white/20 border-b backdrop-blur-md border-gray-200 sticky top-0 z-50 shadow-sm">

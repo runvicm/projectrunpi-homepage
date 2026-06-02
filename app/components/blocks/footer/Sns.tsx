@@ -1,4 +1,14 @@
 const SNS = [
+   {
+    label: 'Upwork',
+    icon: 'up',
+    href: 'https://www.upwork.com/freelancers/~0100c0f1552b67ba88',
+  },
+   {
+    label: 'Linkedin',
+    icon: 'in',
+    href: 'https://www.linkedin.com/in/runvcm13/',
+  },
   {
     label: 'Facebook',
     icon: 'f',
@@ -8,11 +18,6 @@ const SNS = [
     label: 'Messenger',
     icon: 'm',
     href: 'https://m.me/runv.cm.2024',
-  },
-  {
-    label: 'Linkedin',
-    icon: 'in',
-    href: 'https://www.linkedin.com/in/runvcm13/',
   },
 ] as const
 

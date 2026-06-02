@@ -5,20 +5,6 @@ import { PersonalProjects } from "~/components/sections/PersonalProject";
 import { ServicesSection } from "~/components/sections/ServicesSection";
 import { Devlog } from "~/components/sections/DevLog";
 import { FeatureProject } from "~/components/sections/FeatureProject";
-import type { LoaderFunctionArgs } from "react-router";
-
-
-
-
-
-// export async function loader() {
-//   const res = await fetch("https://jsonplaceholder.typicode.com/posts/1");
-//   const data = await res.json();
-//   console.log("data:", data);
-//   return data;
-// }
-
-
 
 export function meta({}: Route.MetaArgs) {
   return [

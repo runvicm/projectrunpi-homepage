@@ -1,8 +1,6 @@
 import { Box, Calendar, NotebookPen } from "lucide-react"
 import { PersonalProjectCard } from "../blocks/cards/PersonalProjectCard"
 
-
-
 export const PERSONAL_PROJECTS = [
   {
     title: 'Devlog',
@@ -31,7 +29,7 @@ export const PersonalProjects = () => (
     <div className="max-w-7xl mx-auto px-6">
       <div className="text-center mb-12">
         <h3 className="text-4xl font-bold text-teal-700 mb-4">Personal Projects</h3>
-        <p className="text-gray-600 text-lg mb-6">"Things I build on my own time."</p>
+        <p className="text-gray-600 text-lg mb-6">Things I build on my own time.</p>
         <div className="flex justify-center gap-2">
           <span className="px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">Frontend</span>
           <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">Backend</span>

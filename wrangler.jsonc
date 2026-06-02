@@ -7,10 +7,19 @@
   "routes": [
     {
       "pattern": "projectrunpi.com",
-      "custom_domain": true
+      "custom_domain": true,
+      "zone_name": "projectrunpi.com",
+      "enabled": true,
+      "previews_enabled": false
     }
   ],
-  "stream": {
-  "binding": "stream"
-}
+  "vars": {
+    "API_URL": "https://api.projectrunpi.com"
+  },
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
+    }
+  }
 }
