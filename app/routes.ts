@@ -8,4 +8,7 @@ export default [
   // API routes
   route('/api/devlog/view/:slug', 'routes/api/viewdevlog.ts'),
   route('/api/devlog', 'routes/api/devloglist.ts'),
+
+  //file
+  route(".well-known/security.txt", "routes/file/well-known.security-txt.ts"),
 ] satisfies RouteConfig;
