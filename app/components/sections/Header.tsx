@@ -6,7 +6,7 @@ import { AppName } from "../ui/AppName"
 
 export const Header = () => {
   return (
-    <nav className="bg-white/20 border-b backdrop-blur-md border-gray-200 sticky top-0 z-50 shadow-sm">
+    <header className="bg-white/20 border-b backdrop-blur-md border-gray-200 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div id="bnand" className="flex gap-2">
@@ -20,6 +20,6 @@ export const Header = () => {
           <MobileMainNavLink />
         </div>
       </div>
-    </nav>
+    </header>
   )
 }
