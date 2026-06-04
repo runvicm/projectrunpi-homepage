@@ -10,7 +10,7 @@ import { env } from "cloudflare:workers";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: `${SITE_NAME} - Home` },
+    { title: `${SITE_NAME} - Web Dev, Projects & Services` },
     { name: `${SITE_NAME}`, content: `Welcome to ${SITE_NAME}` },
   ];
 }

@@ -4,12 +4,11 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "pro",
+	"name": "projectrunpi-homepage",
 	"compatibility_date": "2026-06-03",
 	"main": "./workers/app.ts",
 	"vars": {
 		"API_URL": "https://api.projectrunpi.com",
-		"VALUE_FROM_CLOUDFLARE": "Hello from Cloudflare"
 	},
 	"observability": {
 		"enabled": true

@@ -29,9 +29,23 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:image" content="https://projectrunpi.com/og-image.png" />
-        <meta property="og:title" content="Project RunPi" />
+        <meta name="description" content="I build real, working web apps with React Router 7 and Laravel, tailored to what you actually need." />
+
+        <meta property="og:url" content="https://projectrunpi.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Project RunPi - Web Dev, Projects & Services" />
         <meta property="og:description" content="I build real, working web apps with React Router 7 and Laravel, tailored to what you actually need." />
+        <meta property="og:image" content="https://projectrunpi.com/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://projectrunpi.com" />
+        <meta name="twitter:title" content="Project RunPi - Web Dev, Projects & Services" />
+        <meta name="twitter:description" content="I build real, working web apps with React Router 7 and Laravel, tailored to what you actually need." />
+        <meta name="twitter:image" content="https://projectrunpi.com/og-image.png" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
         <Meta />
         <Links />
       </head>
